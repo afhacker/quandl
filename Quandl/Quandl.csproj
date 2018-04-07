@@ -43,8 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TablesRequest.cs" />
-    <Compile Include="TimeSeriesRequest.cs" />
+    <Compile Include="BaseURL.cs" />
+    <Compile Include="Enums\APIType.cs" />
+    <Compile Include="Enums\Collapse.cs" />
+    <Compile Include="Enums\DownloadType.cs" />
+    <Compile Include="Enums\Order.cs" />
+    <Compile Include="Enums\ReturnFormat.cs" />
+    <Compile Include="Enums\Transform.cs" />
+    <Compile Include="TablesParameters.cs" />
+    <Compile Include="TimeSeriesParameters.cs" />
+    <Compile Include="RequestUtility.cs" />
+    <Compile Include="Request.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
