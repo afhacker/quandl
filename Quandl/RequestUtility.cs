@@ -102,42 +102,44 @@ namespace Quandl
 
             UriBuilder uriBuilder = new UriBuilder(url);
 
-            uriBuilder.Query = $"api_key={apiKey}";
+            string uriQuery = $"api_key={apiKey}";
 
             if (parameters.Limit.HasValue)
             {
-                uriBuilder.Query += $"&limit={parameters.Limit}";
+                uriQuery += $"&limit={parameters.Limit}";
             }
 
             if (parameters.ColumnIndex.HasValue)
             {
-                uriBuilder.Query += $"&column_index={parameters.ColumnIndex}";
+                uriQuery += $"&column_index={parameters.ColumnIndex}";
             }
 
             if (parameters.StartDate.HasValue)
             {
-                uriBuilder.Query += $"&start_date={parameters.StartDate.Value.ToString("yyyy-MM-dd")}";
+                uriQuery += $"&start_date={parameters.StartDate.Value.ToString("yyyy-MM-dd")}";
             }
 
             if (parameters.EndDate.HasValue)
             {
-                uriBuilder.Query += $"&end_date={parameters.EndDate.Value.ToString("yyyy-MM-dd")}";
+                uriQuery += $"&end_date={parameters.EndDate.Value.ToString("yyyy-MM-dd")}";
             }
 
             if (parameters.Order != Order.None)
             {
-                uriBuilder.Query += $"&order={GetOrder(parameters.Order)}";
+                uriQuery += $"&order={GetOrder(parameters.Order)}";
             }
 
             if (parameters.Collapse != Collapse.None)
             {
-                uriBuilder.Query += $"&collapse={GetCollapse(parameters.Collapse)}";
+                uriQuery += $"&collapse={GetCollapse(parameters.Collapse)}";
             }
 
             if (parameters.Transform != Transform.None)
             {
-                uriBuilder.Query += $"&transform={GetTransform(parameters.Transform)}";
+                uriQuery += $"&transform={GetTransform(parameters.Transform)}";
             }
+
+            uriBuilder.Query = uriQuery;
 
             return uriBuilder.Uri;
         }
@@ -146,45 +148,50 @@ namespace Quandl
         {
             string url = $"{BaseURL.TablesURL}{parameters.VendorCode}/{parameters.DatatableCode}";
 
-            url += parameters.Metadata ? $"/metadata" : string.Empty;
+            url += parameters.Metadata.HasValue && parameters.Metadata.Value ? $"/metadata" : string.Empty;
 
             url += $".{GetReturnFormat(parameters.ReturnFormat)}";
 
             UriBuilder uriBuilder = new UriBuilder(url);
 
-            uriBuilder.Query = $"api_key={apiKey}";
+            string uriQuery = $"api_key={apiKey}";
 
-            foreach (KeyValuePair<string, List<string>> rowFilter in parameters.RowsFilter)
+            if (parameters.RowsFilter != null && parameters.RowsFilter.Any())
             {
-                if (rowFilter.Value != null && rowFilter.Value.Any())
+                foreach (KeyValuePair<string, List<string>> rowFilter in parameters.RowsFilter)
                 {
-                    uriBuilder.Query += $"&{rowFilter.Key}=";
+                    if (rowFilter.Value != null && rowFilter.Value.Any())
+                    {
+                        uriQuery += $"&{rowFilter.Key}=";
 
-                    rowFilter.Value.ToList().ForEach(v => uriBuilder.Query += rowFilter.Value.Last() != v ? $"{v}," : v);
+                        rowFilter.Value.ToList().ForEach(v => uriQuery += rowFilter.Value.Last() != v ? $"{v}," : v);
+                    }
                 }
             }
 
             if (parameters.Columns != null && parameters.Columns.Any())
             {
-                uriBuilder.Query += $"&qopts.columns=";
+                uriQuery += $"&qopts.columns=";
 
-                parameters.Columns.ToList().ForEach(col => uriBuilder.Query += parameters.Columns.Last() != col ? $"{col}," : col);
+                parameters.Columns.ToList().ForEach(col => uriQuery += parameters.Columns.Last() != col ? $"{col}," : col);
             }
 
             if (parameters.PerPage.HasValue)
             {
-                uriBuilder.Query += $"&qopts.per_page={parameters.PerPage}";
+                uriQuery += $"&qopts.per_page={parameters.PerPage}";
             }
 
             if (!string.IsNullOrEmpty(parameters.CursorID))
             {
-                uriBuilder.Query += $"&qopts.cursor_id={parameters.CursorID}";
+                uriQuery += $"&qopts.cursor_id={parameters.CursorID}";
             }
 
-            if (parameters.Export)
+            if (parameters.Export.HasValue && parameters.Export.Value)
             {
-                uriBuilder.Query += "&qopts.export=true";
+                uriQuery += "&qopts.export=true";
             }
+
+            uriBuilder.Query = uriQuery;
 
             return uriBuilder.Uri;
         }

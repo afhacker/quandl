@@ -20,9 +20,9 @@ namespace Quandl
 
         public string CursorID { get; set; }
 
-        public bool Metadata { get; set; }
+        public bool? Metadata { get; set; }
 
-        public bool Export { get; set; }
+        public bool? Export { get; set; }
 
         #endregion Properties
     }

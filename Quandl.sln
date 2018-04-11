@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quandl", "Quandl\Quandl.csproj", "{59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuandlTester", "QuandlTester\QuandlTester.csproj", "{3A999745-9087-44B4-9826-DA789C76CBC1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE} = {59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
