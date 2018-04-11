@@ -4,17 +4,6 @@ namespace Quandl
 {
     public class TimeSeriesParameters
     {
-        #region Constructor
-
-        public TimeSeriesParameters(string databaseCode, ReturnFormat returnFormat)
-        {
-            DatabaseCode = databaseCode;
-
-            ReturnFormat = returnFormat;
-        }
-
-        #endregion Constructor
-
         #region Properties
 
         public string DatabaseCode { get; set; }

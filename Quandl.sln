@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quandl", "Quandl\Quandl.csproj", "{59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuandlTester", "QuandlTester\QuandlTester.csproj", "{3A999745-9087-44B4-9826-DA789C76CBC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A999745-9087-44B4-9826-DA789C76CBC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A999745-9087-44B4-9826-DA789C76CBC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A999745-9087-44B4-9826-DA789C76CBC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A999745-9087-44B4-9826-DA789C76CBC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,19 +4,6 @@ namespace Quandl
 {
     public class TablesParameters
     {
-        #region Constructor
-
-        public TablesParameters(string vendorCode, string datatableCode, ReturnFormat returnFormat)
-        {
-            VendorCode = vendorCode;
-
-            DatatableCode = datatableCode;
-
-            ReturnFormat = returnFormat;
-        }
-
-        #endregion Constructor
-
         #region Properties
 
         public string VendorCode { get; set; }
