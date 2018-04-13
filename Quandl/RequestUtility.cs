@@ -24,10 +24,7 @@ namespace Quandl
             }
         }
 
-        public static string GetOrder(Order order)
-        {
-            return order == Order.Ascending || order == Order.None ? "asc" : "desc";
-        }
+        public static string GetOrder(Order order) => order == Order.Ascending || order == Order.None ? "asc" : "desc";
 
         public static string GetCollapse(Collapse collapse)
         {
@@ -77,10 +74,7 @@ namespace Quandl
             }
         }
 
-        public static string GetDownloadType(DownloadType downloadType)
-        {
-            return downloadType == DownloadType.Full ? "full" : "partial";
-        }
+        public static string GetDownloadType(DownloadType downloadType) => downloadType == DownloadType.Full ? "full" : "partial";
 
         public static Uri GetURI(TimeSeriesParameters parameters, string apiKey)
         {
