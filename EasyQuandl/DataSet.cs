@@ -59,7 +59,7 @@ namespace EasyQuandl
         public DateTime EndDate { get; set; }
 
         [JsonProperty("data")]
-        public IList Data { get; set; }
+        public List<IList> Data { get; set; }
 
         [JsonProperty("collapse")]
         public string Collapse { get; set; }
