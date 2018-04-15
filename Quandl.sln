@@ -11,11 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuandlTester", "QuandlTeste
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6F766D7B-684A-40F0-AA30-614505353618}"
-	ProjectSection(SolutionItems) = preProject
-		README.md = README.md
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyQuandl", "EasyQuandl\EasyQuandl.csproj", "{BDACC8F7-3797-44E2-83BE-6CFB51EDC14E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE} = {59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

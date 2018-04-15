@@ -1,4 +1,4 @@
-# quandl
+# Quandl
 A .Net library for interacting with Quandl API
 
 ## Introduction
