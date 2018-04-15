@@ -37,6 +37,8 @@ namespace EasyQuandl
         {
             parameters.ReturnFormat = ReturnFormat.JSON;
 
+            parameters.Metadata = true;
+
             string content = Request.Execute(parameters, apiKey);
 
             JObject jContent = JObject.Parse(content);
@@ -47,6 +49,8 @@ namespace EasyQuandl
         public static async Task<DatabaseMetaData> GetDatabaseMetaDataAsync(TimeSeriesParameters parameters, string apiKey)
         {
             parameters.ReturnFormat = ReturnFormat.JSON;
+
+            parameters.Metadata = true;
 
             string content = await Request.ExecuteAsync(parameters, apiKey);
 
@@ -81,6 +85,8 @@ namespace EasyQuandl
         {
             parameters.ReturnFormat = ReturnFormat.JSON;
 
+            parameters.Metadata = true;
+
             string content = Request.Execute(parameters, apiKey);
 
             JObject jContent = JObject.Parse(content);
@@ -91,6 +97,8 @@ namespace EasyQuandl
         public static async Task<DataTableMetaData> GetDataTableMetaDataAsync(TablesParameters parameters, string apiKey)
         {
             parameters.ReturnFormat = ReturnFormat.JSON;
+
+            parameters.Metadata = true;
 
             string content = await Request.ExecuteAsync(parameters, apiKey);
 
