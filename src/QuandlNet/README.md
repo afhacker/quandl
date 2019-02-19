@@ -8,6 +8,10 @@ The library uses JSON return type but you can set the return type to XML and the
 
 All methods have both Async and non Async versions.
 
+## Installation
+
+
+
 ## Quick Start
 First create a client class instance:
 
@@ -80,3 +84,15 @@ DataTable dataset = await client.GetDataTableAsync(parameters);
 ```
 
 For more information please check the tester project.
+
+<h2>Dependencies</h2>
+
+* <a href="https://github.com/JamesNK/Newtonsoft.Json">Newtonsoft.Json</a>
+
+<h2><a href="https://github.com/afhacker/quandl">NuGet</a></h2>
+
+```Install-Package QuandlNet```
+
+<h2>Licence</h2>
+
+[MIT License (MIT)](./LICENSE)

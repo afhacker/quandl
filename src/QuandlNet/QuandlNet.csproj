@@ -3,6 +3,10 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Description>A .Net library for Quandl API</Description>
+    <PackageLicenseUrl>https://github.com/afhacker/quandl/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/afhacker/quandl</PackageProjectUrl>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
