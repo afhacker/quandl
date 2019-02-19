@@ -1,10 +1,10 @@
-﻿using System;
+﻿using QuandlNet;
+using QuandlNet.Enums;
+using QuandlNet.Models;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Quandl;
 using System.Globalization;
+using System.Linq;
 
 namespace QuandlTester
 {
@@ -12,13 +12,21 @@ namespace QuandlTester
     {
         private static CultureInfo _culture = CultureInfo.InvariantCulture;
 
-        private static string _apiKey;
+        private static Client _client;
 
         private static void Main(string[] args)
         {
             Console.WriteLine("API Key *:");
 
-            _apiKey = Console.ReadLine();
+            string apiKey = Console.ReadLine();
+
+            BaseUrls baseUrls = new BaseUrls
+            {
+                TimeSeriesUrl = "https://www.quandl.com/api/v3/datasets/",
+                TablesUrl = "https://www.quandl.com/api/v3/datatables/"
+            };
+
+            _client = new Client(baseUrls, apiKey);
 
             bool exit = false;
 
@@ -111,7 +119,7 @@ namespace QuandlTester
 
             Console.WriteLine("Result:");
 
-            Console.WriteLine(Request.Execute(parameters, _apiKey));
+            Console.WriteLine(_client.Request(parameters));
         }
 
         private static void GetTablesData()
@@ -156,7 +164,7 @@ namespace QuandlTester
 
             Console.WriteLine("Result:");
 
-            Console.WriteLine(Request.Execute(parameters, _apiKey));
+            Console.WriteLine(_client.Request(parameters));
         }
 
         private static int? ParseInt(string input) => int.TryParse(input, out int result) ? (int?)result : null;

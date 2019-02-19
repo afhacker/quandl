@@ -1,4 +1,4 @@
-﻿namespace Quandl
+﻿namespace QuandlNet.Enums
 {
     public enum Collapse
     {

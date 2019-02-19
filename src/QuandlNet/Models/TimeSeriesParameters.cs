@@ -1,6 +1,7 @@
 ﻿using System;
+using QuandlNet.Enums;
 
-namespace Quandl
+namespace QuandlNet.Models
 {
     public class TimeSeriesParameters
     {

@@ -3,21 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quandl", "src\Quandl\Quandl.csproj", "{59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuandlTester", "src\QuandlTester\QuandlTester.csproj", "{3A999745-9087-44B4-9826-DA789C76CBC1}"
-	ProjectSection(ProjectDependencies) = postProject
-		{59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE} = {59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE}
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6F766D7B-684A-40F0-AA30-614505353618}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyQuandl", "src\EasyQuandl\EasyQuandl.csproj", "{BDACC8F7-3797-44E2-83BE-6CFB51EDC14E}"
-	ProjectSection(ProjectDependencies) = postProject
-		{59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE} = {59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE}
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A262A98B-34CB-40D9-ADF2-399AEE95489F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuandlNet", "src\QuandlNet\QuandlNet.csproj", "{0705D186-769B-43F5-B158-DBEC55451465}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,26 +17,21 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3A999745-9087-44B4-9826-DA789C76CBC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3A999745-9087-44B4-9826-DA789C76CBC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A999745-9087-44B4-9826-DA789C76CBC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A999745-9087-44B4-9826-DA789C76CBC1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BDACC8F7-3797-44E2-83BE-6CFB51EDC14E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BDACC8F7-3797-44E2-83BE-6CFB51EDC14E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BDACC8F7-3797-44E2-83BE-6CFB51EDC14E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BDACC8F7-3797-44E2-83BE-6CFB51EDC14E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0705D186-769B-43F5-B158-DBEC55451465}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0705D186-769B-43F5-B158-DBEC55451465}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0705D186-769B-43F5-B158-DBEC55451465}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0705D186-769B-43F5-B158-DBEC55451465}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE} = {A262A98B-34CB-40D9-ADF2-399AEE95489F}
 		{3A999745-9087-44B4-9826-DA789C76CBC1} = {A262A98B-34CB-40D9-ADF2-399AEE95489F}
-		{BDACC8F7-3797-44E2-83BE-6CFB51EDC14E} = {A262A98B-34CB-40D9-ADF2-399AEE95489F}
+		{0705D186-769B-43F5-B158-DBEC55451465} = {A262A98B-34CB-40D9-ADF2-399AEE95489F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8B884702-9D8B-4E13-A4B2-2E50011AF8B8}

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using QuandlNet.Enums;
 
-namespace Quandl
+namespace QuandlNet.Models
 {
     public class TablesParameters
     {

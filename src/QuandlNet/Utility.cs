@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using QuandlNet.Enums;
+using QuandlNet.Models;
 
-namespace Quandl
+namespace QuandlNet
 {
-    public static class RequestUtility
+    public static class Utility
     {
         public static string GetReturnFormat(ReturnFormat returnFormat)
         {
@@ -76,9 +78,9 @@ namespace Quandl
 
         public static string GetDownloadType(DownloadType downloadType) => downloadType == DownloadType.Full ? "full" : "partial";
 
-        public static Uri GetURI(TimeSeriesParameters parameters, string apiKey)
+        public static Uri GetURI(TimeSeriesParameters parameters, BaseUrls baseUrls, string apiKey)
         {
-            string url = $"{BaseURL.TimeSeriesURL}{parameters.DatabaseCode}";
+            string url = $"{baseUrls.TimeSeriesUrl}{parameters.DatabaseCode}";
 
             if (!string.IsNullOrEmpty(parameters.DatasetCode))
             {
@@ -138,9 +140,9 @@ namespace Quandl
             return uriBuilder.Uri;
         }
 
-        public static Uri GetURI(TablesParameters parameters, string apiKey)
+        public static Uri GetURI(TablesParameters parameters, BaseUrls baseUrls, string apiKey)
         {
-            string url = $"{BaseURL.TablesURL}{parameters.VendorCode}/{parameters.DatatableCode}";
+            string url = $"{baseUrls.TablesUrl}{parameters.VendorCode}/{parameters.DatatableCode}";
 
             url += parameters.Metadata.HasValue && parameters.Metadata.Value ? $"/metadata" : string.Empty;
 
