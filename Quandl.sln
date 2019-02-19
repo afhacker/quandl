@@ -3,19 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quandl", "Quandl\Quandl.csproj", "{59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quandl", "src\Quandl\Quandl.csproj", "{59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuandlTester", "QuandlTester\QuandlTester.csproj", "{3A999745-9087-44B4-9826-DA789C76CBC1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuandlTester", "src\QuandlTester\QuandlTester.csproj", "{3A999745-9087-44B4-9826-DA789C76CBC1}"
 	ProjectSection(ProjectDependencies) = postProject
 		{59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE} = {59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE}
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6F766D7B-684A-40F0-AA30-614505353618}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyQuandl", "EasyQuandl\EasyQuandl.csproj", "{BDACC8F7-3797-44E2-83BE-6CFB51EDC14E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyQuandl", "src\EasyQuandl\EasyQuandl.csproj", "{BDACC8F7-3797-44E2-83BE-6CFB51EDC14E}"
 	ProjectSection(ProjectDependencies) = postProject
 		{59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE} = {59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE}
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A262A98B-34CB-40D9-ADF2-399AEE95489F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{59BB0CDD-A6B7-4AA7-B4A6-F20377BEA6FE} = {A262A98B-34CB-40D9-ADF2-399AEE95489F}
+		{3A999745-9087-44B4-9826-DA789C76CBC1} = {A262A98B-34CB-40D9-ADF2-399AEE95489F}
+		{BDACC8F7-3797-44E2-83BE-6CFB51EDC14E} = {A262A98B-34CB-40D9-ADF2-399AEE95489F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8B884702-9D8B-4E13-A4B2-2E50011AF8B8}
