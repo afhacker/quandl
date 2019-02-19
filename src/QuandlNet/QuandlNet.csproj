@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>A .Net library for Quandl API</Description>
   </PropertyGroup>
 
   <ItemGroup>

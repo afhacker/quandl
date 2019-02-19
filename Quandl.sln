@@ -8,6 +8,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6F766D7B-684A-40F0-AA30-614505353618}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A262A98B-34CB-40D9-ADF2-399AEE95489F}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuandlNet", "src\QuandlNet\QuandlNet.csproj", "{0705D186-769B-43F5-B158-DBEC55451465}"
 EndProject
