@@ -19,6 +19,8 @@ namespace QuandlNet
 
         public Client(BaseUrls baseUrls, string apiKey)
         {
+            System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
+
             _baseUrls = baseUrls;
 
             _apiKey = apiKey;

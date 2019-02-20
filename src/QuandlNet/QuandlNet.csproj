@@ -7,6 +7,8 @@
     <PackageProjectUrl>https://github.com/afhacker/quandl</PackageProjectUrl>
     <NeutralLanguage>en-US</NeutralLanguage>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Company>AlgoDeveloper</Company>
+    <Authors>AlgoDeveloper</Authors>
   </PropertyGroup>
 
   <ItemGroup>
